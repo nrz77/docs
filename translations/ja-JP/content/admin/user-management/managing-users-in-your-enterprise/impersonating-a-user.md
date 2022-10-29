@@ -3,7 +3,7 @@ title: ユーザーの偽装
 intro: トラブルシューティング、ブロック解除、その他の正当な理由のために、ユーザーを偽装し、ユーザーに代わってアクションを実行できます。
 permissions: Enterprise owners can impersonate users within their enterprise.
 versions:
-  ghes: '*'
+  ghes: '>3.2'
   ghae: '*'
 type: how_to
 topics:
@@ -11,12 +11,12 @@ topics:
   - Enterprise
   - User account
 shortTitle: Impersonate a user
-ms.openlocfilehash: df0513c3ca2931378e656f228939540dd5ea5816
-ms.sourcegitcommit: f638d569cd4f0dd6d0fb967818267992c0499110
+ms.openlocfilehash: 8e237c6ace7e7feb4badefcbd863b0974c983732
+ms.sourcegitcommit: fb047f9450b41b24afc43d9512a5db2a2b750a2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2022
-ms.locfileid: '148109291'
+ms.lasthandoff: 09/11/2022
+ms.locfileid: '145116269'
 ---
 ## ユーザーの偽装について
 

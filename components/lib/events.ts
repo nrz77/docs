@@ -57,7 +57,6 @@ type SendEventProps = {
   exit_visit_duration?: number
   exit_scroll_length?: number
   link_url?: string
-  link_samesite?: boolean
   search_query?: string
   search_context?: string
   search_result_query?: string
@@ -256,13 +255,11 @@ function initCopyButtonEvent() {
 function initLinkEvent() {
   document.documentElement.addEventListener('click', (evt) => {
     const target = evt.target as HTMLElement
-    const link = target.closest('a[href]') as HTMLAnchorElement
+    const link = target.closest('a[href^="http"]') as HTMLAnchorElement
     if (!link) return
-    const sameSite = link.origin === location.origin
     sendEvent({
       type: EventType.link,
       link_url: link.href,
-      link_samesite: sameSite,
     })
   })
 }

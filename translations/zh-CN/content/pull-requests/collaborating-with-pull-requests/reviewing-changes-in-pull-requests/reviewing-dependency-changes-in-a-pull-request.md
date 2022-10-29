@@ -22,6 +22,8 @@ shortTitle: Review dependency changes
 ---
 <!--Marketing-LINK: From /features/security/software-supply-chain page "Sign up for the dependency review beta" and "Reviewing dependency changes in a pull request".-->
 
+{% data reusables.dependency-review.beta %}
+
 ## About dependency review
 
 {% data reusables.dependency-review.feature-overview %}

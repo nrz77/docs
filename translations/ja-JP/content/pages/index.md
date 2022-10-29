@@ -50,4 +50,3 @@ children:
   - /setting-up-a-github-pages-site-with-jekyll
   - /configuring-a-custom-domain-for-your-github-pages-site
 ---
-

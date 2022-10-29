@@ -41,6 +41,9 @@ describe('siteTree', () => {
       expect(pageWithDynamicTitle.page.title).toEqual(
         'Installing {% data variables.product.prodname_enterprise %}'
       )
+
+      // Confirm a new property contains the rendered title
+      expect(pageWithDynamicTitle.renderedFullTitle).toEqual('Installing GitHub Enterprise')
     })
   })
 

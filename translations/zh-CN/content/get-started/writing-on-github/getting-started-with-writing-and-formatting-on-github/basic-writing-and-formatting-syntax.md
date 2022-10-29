@@ -324,6 +324,7 @@ For a full list of available emoji and codes, check out [the Emoji-Cheat-Sheet](
 
 You can create a new paragraph by leaving a blank line between lines of text.
 
+{% ifversion fpt or ghae or ghes > 3.2 or ghec %}
 ## Footnotes
 
 You can add footnotes to your content by using this bracket syntax:
@@ -354,6 +355,7 @@ The footnote will render like this:
 Footnotes are not supported in wikis.
 
 {% endtip %}
+{% endif %}
 
 ## Hiding content with comments
 
@@ -373,9 +375,13 @@ You can tell {% data variables.product.product_name %} to ignore (or escape) Mar
 
 For more information, see Daring Fireball's "[Markdown Syntax](https://daringfireball.net/projects/markdown/syntax#backslash)."
 
+{% ifversion fpt or ghes > 3.2 or ghae or ghec %}
+
 ## Disabling Markdown rendering
 
 {% data reusables.repositories.disabling-markdown-rendering %}
+
+{% endif %}
 
 ## Further reading
 

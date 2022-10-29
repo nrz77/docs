@@ -23,10 +23,10 @@ export default async function findPage(
     return next()
   }
 
-  let page = req.context.pages[req.pagePath]
-  if (page && isDev && englishPrefixRegex.test(req.pagePath)) {
-    page = await rereadByPath(req.pagePath, contentRoot, req.context.currentVersion)
-  }
+  const page =
+    isDev && englishPrefixRegex.test(req.pagePath)
+      ? await rereadByPath(req.pagePath, contentRoot, req.context.currentVersion)
+      : req.context.pages[req.pagePath]
 
   if (page) {
     req.context.page = page
