@@ -59,13 +59,6 @@ describe('find page middleware', () => {
 
   test('re-reads from disk if in development mode', async () => {
     const [req, res] = makeRequestResponse('/en/page-with-redirects')
-    req.context.pages = {
-      '/en/page-with-redirects': await Page.init({
-        relativePath: 'page-with-redirects.md',
-        basePath: path.join(__dirname, '../fixtures'),
-        languageCode: 'en',
-      }),
-    }
 
     await findPage(req, res, () => {}, {
       isDev: true,
@@ -76,13 +69,6 @@ describe('find page middleware', () => {
 
   test('finds it for non-fpt version URLS', async () => {
     const [req, res] = makeRequestResponse('/en/page-with-redirects', 'enterprise-cloud@latest')
-    req.context.pages = {
-      '/en/page-with-redirects': await Page.init({
-        relativePath: 'page-with-redirects.md',
-        basePath: path.join(__dirname, '../fixtures'),
-        languageCode: 'en',
-      }),
-    }
 
     await findPage(req, res, () => {}, {
       isDev: true,

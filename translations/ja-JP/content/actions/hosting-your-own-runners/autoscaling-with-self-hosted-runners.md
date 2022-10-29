@@ -5,7 +5,7 @@ intro: You can automatically scale your self-hosted runners in response to webho
 versions:
   fpt: '*'
   ghec: '*'
-  ghes: '*'
+  ghes: '>3.2'
   ghae: '*'
 type: overview
 ---

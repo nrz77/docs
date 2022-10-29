@@ -70,10 +70,12 @@ You can enable or disable features for all repositories.
    {% ifversion ghec %}
    !["Enable all" or "Disable all" button for "Configure security and analysis" features](/assets/images/help/organizations/security-and-analysis-disable-or-enable-all-ghas-ghec.png)
    {% endif %}
-   {% ifversion ghes %}
+   {% ifversion ghes > 3.2 %}
    !["Enable all" or "Disable all" button for "Configure security and analysis" features](/assets/images/enterprise/3.3/organizations/security-and-analysis-disable-or-enable-all-ghas.png)
    {% endif %}
-   
+   {% ifversion ghes = 3.2 %}
+   !["Enable all" or "Disable all" button for "Configure security and analysis" features](/assets/images/enterprise/3.1/help/organizations/security-and-analysis-disable-or-enable-all-ghas.png)
+   {% endif %}
    
    {% ifversion ghae %}
    !["Enable all" or "Disable all" button for "Configure security and analysis" features](/assets/images/enterprise/github-ae/organizations/security-and-analysis-disable-or-enable-all-ghae.png)
@@ -106,15 +108,17 @@ You can enable or disable features for all repositories.
    {% ifversion fpt or ghec %}
    ![Screenshot of a checkbox for enabling a feature for new repositories](/assets/images/help/organizations/security-and-analysis-enable-or-disable-feature-checkbox.png)
    {% endif %}
-  {% ifversion ghes %}
+  {% ifversion ghes > 3.2 %}
    ![Screenshot of a checkbox for enabling a feature for new repositories](/assets/images/enterprise/3.3/organizations/security-and-analysis-enable-or-disable-feature-checkbox.png)
    {% endif %}
-   
+   {% ifversion ghes = 3.2 %}
+   ![Screenshot of a checkbox for enabling a feature for new repositories](/assets/images/enterprise/3.1/help/organizations/security-and-analysis-enable-or-disable-feature-checkbox.png)
+   {% endif %}
    {% ifversion ghae %}
    ![Screenshot of a checkbox for enabling a feature for new repositories](/assets/images/enterprise/github-ae/organizations/security-and-analysis-enable-or-disable-secret-scanning-checkbox-ghae.png)
    {% endif %}
 
-{% ifversion fpt or ghec or ghes %}
+{% ifversion fpt or ghec or ghes > 3.2 %}
 
 ## Allowing {% data variables.product.prodname_dependabot %} to access private dependencies
 
